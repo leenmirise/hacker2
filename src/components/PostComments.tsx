@@ -2,7 +2,7 @@ import { PostCommentsProps } from "../types/type";
 import { FC, useState } from "react";
 import { Button, Comm } from "../styles/style";
 
-const PostComments: FC<PostCommentsProps> = ({ user, content, comments, id, level  }) => {
+const PostComments: FC<PostCommentsProps> = ({ user, content, comments, level  }) => {
 
     const [show, setShow] = useState(false);
 
@@ -25,7 +25,6 @@ const PostComments: FC<PostCommentsProps> = ({ user, content, comments, id, leve
                             content={comment.content}
                             user={comment.user}
                             comments={comment.comments}
-                            id={comment.id}
                             level={level + 1}
                         />
                     ))

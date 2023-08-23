@@ -48,7 +48,6 @@ const PostPage = () => {
                         content={comment.content}
                         user={comment.user}
                         comments={comment.comments}
-                        id = {comment.id}
                         level={1}
                     />
             ))):

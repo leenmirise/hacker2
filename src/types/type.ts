@@ -49,6 +49,5 @@ export interface PostCommentsProps{
     user: string | null;
     content: string;
     comments: Item[];
-    id: number;
     level: number;
 }
