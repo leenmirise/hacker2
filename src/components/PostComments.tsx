@@ -11,13 +11,13 @@ const PostComments: FC<PostCommentsProps> = ({ user, content, comments, id, leve
     }
 
     return (
-        <Comm style={{ marginLeft: level * 10 }}>
+        <Comm style={{ paddingLeft: level * 5 }}>
             <h4>{user}</h4>
             <div dangerouslySetInnerHTML={{ __html: content }} />
-            {level === 0 && comments.length !== 0 ?
+            {level === 1 && comments.length !== 0 ?
                 <Button onClick={showComments}>Show more</Button>
             : null}
-            {show || level > 0 ?
+            {show || level > 1 ?
                 (comments ? (
                     comments.map((comment) => (
                         <PostComments

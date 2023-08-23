@@ -53,7 +53,8 @@ export const Comm = styled.div`
   border-radius: 5px;
   width: 95%;
   margin-bottom: 10px;
-  padding-left: 20px;
+  padding-right: 10px;
   margin-right: auto;
+  margin-left: auto;
 `;
 
