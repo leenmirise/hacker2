@@ -7,14 +7,14 @@ const PostComments: FC<PostCommentsProps> = ({ user, content, comments, level  }
     const [show, setShow] = useState(false);
 
     const showComments = () => {
-        setShow(!show);
+        setShow((prevState) => !prevState)
     }
 
     return (
         <Comments style={{ paddingLeft: level * 5 }}>
             <h4>{user}</h4>
             <div dangerouslySetInnerHTML={{ __html: content }} />
-            {level === 1 && comments.length !== 0 ?
+            {level === 1 && comments.length ?
                 <Button onClick={showComments}>Show more</Button>
             : null}
             {show || level > 1 ?
