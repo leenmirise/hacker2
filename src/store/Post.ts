@@ -1,6 +1,6 @@
 import { Item } from "../types/type";
 import { makeAutoObservable, runInAction } from "mobx";
-import PostService from "../API/PostService";
+import {getByID} from "../api/PostService";
 
 class Post{
     allPost: Item;
@@ -10,7 +10,7 @@ class Post{
     }
 
     fetchPost(id: string) : Promise<void> {
-        return PostService.getByID(id)
+        return getByID(id)
             .then(post => {
                 runInAction(() => {
                     this.allPost = post;

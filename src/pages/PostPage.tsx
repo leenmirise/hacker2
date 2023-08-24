@@ -1,6 +1,6 @@
 import Navbar from "../components/Navbar";
 import { useParams } from "react-router-dom";
-import React, {useEffect, useState} from "react";
+import {useEffect, useState} from "react";
 import PostInfo from "../components/PostInfo";
 import PostComments from "../components/PostComments";
 import Post from "../store/Post";
@@ -51,7 +51,7 @@ const PostPage = () => {
                         level={1}
                     />
             ))):
-                ('No post found')}
+                ('No comments found')}
         </div>
     );
 };

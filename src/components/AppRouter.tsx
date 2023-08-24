@@ -6,23 +6,18 @@ const AppRouter = () => {
 
     function NotFoundPage() {
         return (
-            <>
-                <Navigate to="/posts" replace />
-            </>
+            <Navigate to="/posts" replace />
         );
     }
 
     return (
-        <div>
-            <BrowserRouter>
-                <Routes>
-                    <Route path="/posts" element={<PostsPage />} />
-                    <Route path="/posts/:id" element={<PostPage />} />
-                    <Route path="*" element={<NotFoundPage />} />
-                </Routes>
-
-            </BrowserRouter>
-        </div>
+        <BrowserRouter>
+            <Routes>
+                <Route path="/posts" element={<PostsPage />} />
+                <Route path="/posts/:id" element={<PostPage />} />
+                <Route path="*" element={<NotFoundPage />} />
+            </Routes>
+        </BrowserRouter>
     );
 };
 

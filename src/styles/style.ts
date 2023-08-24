@@ -37,7 +37,7 @@ export const Card = styled.div`
   padding-left: 20px;
 `;
 
-export const CardP = styled.p`
+export const CardText = styled.p`
   color: grey;
 `;
 
@@ -47,7 +47,7 @@ export const Line = styled.hr`
   margin-bottom: 20px;
 `;
 
-export const Comm = styled.div`
+export const Comments = styled.div`
   min-height: 150px;
   border: 3px solid #90d0d0;
   border-radius: 5px;

@@ -1,6 +1,6 @@
 import { PostCommentsProps } from "../types/type";
 import { FC, useState } from "react";
-import { Button, Comm } from "../styles/style";
+import { Button, Comments } from "../styles/style";
 
 const PostComments: FC<PostCommentsProps> = ({ user, content, comments, level  }) => {
 
@@ -11,7 +11,7 @@ const PostComments: FC<PostCommentsProps> = ({ user, content, comments, level  }
     }
 
     return (
-        <Comm style={{ paddingLeft: level * 5 }}>
+        <Comments style={{ paddingLeft: level * 5 }}>
             <h4>{user}</h4>
             <div dangerouslySetInnerHTML={{ __html: content }} />
             {level === 1 && comments.length !== 0 ?
@@ -30,7 +30,7 @@ const PostComments: FC<PostCommentsProps> = ({ user, content, comments, level  }
                     ))
                 ) : null)
                 : null}
-        </Comm>
+        </Comments>
     );
 };
 

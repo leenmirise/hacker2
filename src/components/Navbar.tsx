@@ -1,10 +1,12 @@
 import { Nav, Button } from '../styles/style'
-import { Link } from "react-router-dom";
+import {Link, useNavigate} from "react-router-dom";
 
 const Navbar = () => {
 
+    const navigate = useNavigate();
+
     const refreshPage = ()=>{
-        window.location.reload();
+        navigate('/', { replace: true });
     }
 
     return (
